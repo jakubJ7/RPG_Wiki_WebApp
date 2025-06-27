@@ -7,9 +7,11 @@ A simple web app to manage a wiki/fandom for an RPG game
 
 PL:  
 Prosta aplikacja webowa umożliwiająca zarządzanie encyklopedią świata gry RPG, w tym przedmiotami, postaciami oraz interakcjami użytkowników.
+Mini-projekt wykonany na zaliczenie laboratoriów z programowania zaawansowanego.  
 
 EN:  
 A simple web application for managing an RPG game encyclopedia, including items, characters, and user interactions.
+Mini-project developed as a requirement for passing the advanced programming lab course.
 
 ---
 
@@ -74,3 +76,25 @@ A simple web application for managing an RPG game encyclopedia, including items,
 - ✅ Panel do przeglądania zgłoszonych nowych postaci  
   **PL:** Admin może przejrzeć zgłoszenie, poprawić je lub zaakceptować.  
   **EN:** Admin can review, edit, or approve submitted characters.
+
+## Pokaz dzialania / Showcase
+
+![Panel logowania / Login panel](showcase/login.png)  
+**PL:** Panel logowania.  
+**EN:** Login panel.
+
+![Panel rejestracji / Registration panel](showcase/register.png)  
+**PL:** Panel rejestracji.  
+**EN:** Registration panel.
+
+![Lista broni / Weapons list](showcase/weapon_list.png)  
+**PL:** Lista dostępnej broni.  
+**EN:** List of available weapons.
+
+![Panel edycji przedmiotu / Edit item panel](showcase/edit_form.png)  
+**PL:** Formularz edycji przedmiotu.  
+**EN:** Edit item form.
+
+![Czat na żywo / Live chat](showcase/live_chat.png)  
+**PL:** Czat na żywo dla użytkowników.  
+**EN:** Live chat for users.
