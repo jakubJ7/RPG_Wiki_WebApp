@@ -1,0 +1,36 @@
+﻿@model RPG_Wiki_WebApp.Models.Character.CharacterType
+
+@{
+    ViewData["Title"] = "Edit Character Type";
+}
+
+<h1 class="text-center my-4">🎭 Edit Character Type</h1>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-warning text-white">
+        <h4 class="text-center">Modify Character Type Information</h4>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Character Type Name</label>
+                <input asp-for="Name" class="form-control" required minlength="3" maxlength="50" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="card-footer d-flex gap-2 justify-content-between">
+                <button type="submit" class="btn btn-warning">💾 Save Changes</button>
+                <a asp-action="Index" class="btn btn-secondary">⬅️ Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

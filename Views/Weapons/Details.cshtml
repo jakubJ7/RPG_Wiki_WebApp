@@ -1,0 +1,36 @@
+﻿@model RPG_Wiki_WebApp.Models.Item.Weapon.Weapon
+
+@{
+    ViewData["Title"] = "Weapon Details";
+}
+
+<h1 class="text-center my-4">⚔️ Weapon Details</h1>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-primary text-white">
+        <h4 class="text-center">Weapon Information</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3 font-weight-bold">Name</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Name) (Item code: @Html.DisplayFor(model => model.ItemCode))</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Item Rarity</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.ItemRarity.Name)</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Weapon Type</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.WeaponType.Name)</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Damage</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.MinDamage) - @Html.DisplayFor(model => model.MaxDamage)</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Value</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Value)</dd>
+        </dl>
+    </div>
+
+    <div class="card-footer d-flex gap-2 justify-content-between">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">📝 Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">⬅️ Back to List</a>
+    </div>
+</div>

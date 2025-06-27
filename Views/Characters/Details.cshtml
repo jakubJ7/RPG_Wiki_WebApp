@@ -1,0 +1,44 @@
+﻿@model RPG_Wiki_WebApp.Models.Character.Character
+
+@{
+    ViewData["Title"] = "Character Details";
+}
+
+<h1 class="text-center my-4">🎭 Character Details</h1>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-primary text-white">
+        <h4 class="text-center">Character Information</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3 font-weight-bold">Character Code</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.CharacterCode)</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Name</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Description</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+
+            <dt class="col-sm-3 font-weight-bold">Character Type</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.CharacterType.Name)</dd>
+        </dl>
+    </div>
+
+    <div class="card-footer d-flex gap-2 justify-content-between">
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">📝 Edit</a>
+            <a asp-controller="Admin" asp-action="CharacterAccept" class="btn btn-info">📜 Back to List</a>
+            <form asp-controller="Admin" asp-action="ApproveCharacter" method="post" class="d-inline">
+                <input type="hidden" name="characterId" value="@Model.Id" />
+                <button type="submit" class="btn btn-success">✅ Accept</button>
+            </form>
+        }
+        else
+        {
+            <a asp-action="Index" class="btn btn-secondary">⬅️ Back to List</a>
+        }
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model RPG_Wiki_WebApp.ViewModels.LoginViewModel
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg rounded-lg p-4" style="width: 400px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h2>🔐 Login to RPG Wiki</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label">Email Address</label>
+                    <input asp-for="Username" class="form-control" id="login" placeholder="Enter your email" required />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Enter password" required />
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">🔑 Sign In</button>
+
+                <div class="text-center mt-3">
+                    <div class="dropdown-divider"></div>
+                    <a asp-controller="Account" asp-action="Register" class="btn btn-secondary">🆕 Are you new? Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

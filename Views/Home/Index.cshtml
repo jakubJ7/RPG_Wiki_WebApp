@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Items</h2>
+
+    <div class="row g-4">
+        <!-- Weapons -->
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img class="card-img-top img-fluid" src="images/weapons-card.png" alt="Weapons">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Weapons</h5>
+                    <p class="card-text">Explore various weapons.</p>
+                    <a asp-controller="Weapons" asp-action="Index" class="btn btn-outline-primary">All</a>
+                    @foreach (var weaponType in ViewBag.WeaponTypes)
+                    {
+                        <a asp-controller="Weapons" asp-action="Index" asp-route-weaponTypeId="@weaponType.Id" class="btn btn-outline-primary">@weaponType.Name</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Armors -->
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img class="card-img-top img-fluid" src="images/armors-card.png" alt="Armors">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Armors</h5>
+                    <p class="card-text">Browse different armors.</p>
+                    <a asp-controller="Armors" asp-action="Index" class="btn btn-outline-primary">All</a>
+                    @foreach (var armorType in ViewBag.ArmorTypes)
+                    {
+                        <a asp-controller="Armors" asp-action="Index" asp-route-armorTypeId="@armorType.Id" class="btn btn-outline-primary">@armorType.Name</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Miscs -->
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img class="card-img-top img-fluid" src="images/miscs-card.png" alt="Miscellaneous">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Miscs</h5>
+                    <p class="card-text">View various miscellaneous items.</p>
+                    <a asp-controller="Miscs" asp-action="Index" class="btn btn-outline-primary">All</a>
+                    @foreach (var miscType in ViewBag.MiscTypes)
+                    {
+                        <a asp-controller="Miscs" asp-action="Index" asp-route-miscTypeId="@miscType.Id" class="btn btn-outline-primary">@miscType.Name</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Characters -->
+    <h2 class="text-center mt-5 mb-4">Characters</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <img class="card-img-top img-fluid" src="images/characters-card.png" alt="Characters">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Characters</h5>
+                    <p class="card-text">Discover unique characters.</p>
+                    <a asp-controller="Characters" asp-action="Index" class="btn btn-outline-primary">All</a>
+                    @foreach (var characterType in ViewBag.CharacterTypes)
+                    {
+                        <a asp-controller="Characters" asp-action="Index" asp-route-characterTypeId="@characterType.Id" class="btn btn-outline-primary">@characterType.Name</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

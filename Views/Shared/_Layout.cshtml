@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RPG Wiki</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RPG_Wiki_WebApp.styles.css" asp-append-version="true" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .footer {
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar - zawsze na górze -->
+    <header class="navbar navbar-expand-sm navbar-dark bg-dark shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">🛡️ RPG Wiki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">🏠 Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">🎒 Items</a>
+                        <ul class="dropdown-menu bg-light">
+                            <li><a asp-controller="Weapons" asp-action="Index" class="dropdown-item">⚔️ Weapons</a></li>
+                            <li><a asp-controller="Armors" asp-action="Index" class="dropdown-item">🛡️ Armors</a></li>
+                            <li><a asp-controller="Miscs" asp-action="Index" class="dropdown-item">🔮 Misc</a></li>
+                        </ul>
+                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item"><a class="nav-link text-white" asp-controller="Chat" asp-action="Index">💬 Chat Wiki</a></li>
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-warning" data-bs-toggle="dropdown">🔧 Admin Panel</a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><a asp-controller="Admin" asp-action="Index" class="dropdown-item">📊 Database Statistic</a></li>
+                                <li><a asp-controller="CharacterTypes" asp-action="Index" class="dropdown-item">👤 Manage Character Types</a></li>
+                                <li><a asp-controller="Admin" asp-action="CharacterAccept" class="dropdown-item">✅ Characters to Accept</a></li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-danger">🚪 Logout</button>
+                    </form>
+                }
+                else
+                {
+                    <a class="btn btn-info" asp-controller="Account" asp-action="Login">🔑 Login</a>
+                }
+            </div>
+        </div>
+    </header>
+
+    <!-- Zawartość strony -->
+    <main class="content mt-5 pt-4">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </main>
+
+    <!-- Footer - ostatni element na stronie -->
+    <footer class="bg-light text-center small text-muted py-2 mt-5" style="position: relative; width: 100%;">
+        <div class="container-fluid">
+            &copy; 2025 RPG Wiki - <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+        </div>
+    </footer>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

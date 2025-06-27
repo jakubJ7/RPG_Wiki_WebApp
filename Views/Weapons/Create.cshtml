@@ -1,0 +1,70 @@
+﻿@model RPG_Wiki_WebApp.Models.Item.Weapon.Weapon
+
+@{
+    ViewData["Title"] = "Create Weapon";
+}
+
+<h1 class="text-center my-4">🛠️ Create New Weapon</h1>
+
+<div class="card shadow-lg p-4">
+    <h4 class="card-title text-center">Weapon Details</h4>
+    <hr />
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Weapon Name</label>
+                    <input asp-for="Name" class="form-control" required minlength="3" maxlength="50" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ItemCode" class="form-label">Item Code</label>
+                    <input asp-for="ItemCode" class="form-control" required minlength="3" maxlength="20" />
+                    <span asp-validation-for="ItemCode" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ItemRarityId" class="form-label">Item Rarity</label>
+                    <select asp-for="ItemRarityId" class="form-control" asp-items="ViewBag.ItemRarityId"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="WeaponTypeId" class="form-label">Weapon Type</label>
+                    <select asp-for="WeaponTypeId" class="form-control" asp-items="ViewBag.WeaponTypeId"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MinDamage" class="form-label">Minimal Damage</label>
+                    <input asp-for="MinDamage" class="form-control" required type="number" min="1" />
+                    <span asp-validation-for="MinDamage" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MaxDamage" class="form-label">Maximal Damage</label>
+                    <input asp-for="MaxDamage" class="form-control" required type="number" min="1" />
+                    <span asp-validation-for="MaxDamage" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Value" class="form-label">Value</label>
+                    <input asp-for="Value" class="form-control" required type="number" min="1" />
+                    <span asp-validation-for="Value" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-success">➕ Create</button>
+                    <a asp-action="Index" class="btn btn-secondary">⬅️ Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

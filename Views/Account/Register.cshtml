@@ -1,0 +1,41 @@
+﻿@model RPG_Wiki_WebApp.ViewModels.RegisterViewModel
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg rounded-lg p-4" style="width: 400px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h2>🆕 Create New Account</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email Address</label>
+                    <input asp-for="Email" type="email" class="form-control rounded-lg" placeholder="email@example.com" required />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label">Username</label>
+                    <input asp-for="Username" class="form-control rounded-lg" placeholder="Enter username" required />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control rounded-lg" placeholder="Enter password" required />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Nickname" class="form-label">In-Game Nickname</label>
+                    <input asp-for="Nickname" class="form-control rounded-lg" placeholder="Your gaming nickname" />
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">🚀 Register Now</button>
+
+                <div class="text-center mt-3">
+                    <div class="dropdown-divider"></div>
+                    <a asp-controller="Account" asp-action="Login" class="btn btn-secondary">🔑 Already have an account? Log in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

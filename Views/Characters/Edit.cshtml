@@ -1,0 +1,54 @@
+﻿@model RPG_Wiki_WebApp.Models.Character.Character
+
+@{
+    ViewData["Title"] = "Edit Character";
+}
+
+<h1 class="text-center my-4">🎭 Edit Character</h1>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-warning text-white">
+        <h4 class="text-center">Modify Character Information</h4>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="CharacterCode" class="form-label">Character Code</label>
+                <input asp-for="CharacterCode" class="form-control" required minlength="3" maxlength="10" />
+                <span asp-validation-for="CharacterCode" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Character Name</label>
+                <input asp-for="Name" class="form-control" required minlength="3" maxlength="50" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea asp-for="Description" class="form-control" rows="5" required maxlength="500"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CharacterTypeId" class="form-label">Character Type</label>
+                <select asp-for="CharacterTypeId" class="form-control" asp-items="ViewBag.CharacterTypeId"></select>
+                <span asp-validation-for="CharacterTypeId" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-warning">💾 Save Changes</button>
+                <a asp-action="Index" class="btn btn-secondary">⬅️ Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

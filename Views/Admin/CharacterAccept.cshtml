@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Characters to Accept";
+}
+
+@model List<RPG_Wiki_WebApp.Models.Character.Character>
+
+<h1 class="text-center my-4">✅ Characters to Accept</h1>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-primary text-white">
+        <h4 class="text-center">Pending Character Approval</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var character in Model)
+                    {
+                        <tr>
+                            <td>@character.Name</td>
+                            <td class="text-center">
+                                <div class="btn-group">
+                                    <a class="btn btn-info btn-sm" asp-controller="Characters" asp-action="Details" asp-route-id="@character.Id">🔍 See Details</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

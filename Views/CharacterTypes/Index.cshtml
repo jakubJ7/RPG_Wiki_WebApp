@@ -1,0 +1,44 @@
+﻿@model IEnumerable<RPG_Wiki_WebApp.Models.Character.CharacterType>
+
+@{
+    ViewData["Title"] = "Character Types";
+}
+
+<h1 class="text-center my-4">🎭 Character Types</h1>
+
+<p class="text-center mb-3">
+    <a asp-action="Create" class="btn btn-success">➕ Create New Character Type</a>
+</p>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-info text-white">
+        <h4 class="text-center">Available Character Types</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td class="text-center">
+                                <div class="btn-group btn-sm">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">📝 Edit</a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">🔍 Details</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">❌ Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

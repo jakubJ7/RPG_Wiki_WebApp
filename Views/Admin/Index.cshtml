@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1 class="text-center my-4">📊 Admin Dashboard (Database Statistics)</h1>
+
+<div class="container">
+    <!-- Górna sekcja -->
+    <div class="row justify-content-center text-center mb-4">
+        <div class="col-md-4">
+            <div class="card bg-primary text-white shadow-lg rounded-lg">
+                <div class="card-header text-white fw-bold">📦 Overview</div>
+                <div class="card-body">
+                    <h5 class="card-title">All Items</h5>
+                    <p class="display-4 fw-bold">@ViewBag.TotalItems</p>
+                    <p>Item Rarities: @ViewBag.TotalRarities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekcja przedmiotów -->
+    <div class="row justify-content-center text-center">
+        <div class="col-md-3 mb-4">
+            <div class="card bg-danger text-white shadow-lg rounded-lg">
+                <div class="card-header text-white fw-bold">⚔️ Weapons</div>
+                <div class="card-body">
+                    <h5 class="card-title">Total Weapons</h5>
+                    <p class="display-5 fw-bold">@ViewBag.TotalWeapons</p>
+                    <p class="fw-light">Weapon Types: @ViewBag.TotalWeaponTypes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-warning text-dark shadow-lg rounded-lg">
+                <div class="card-header text-dark fw-bold">🛡️ Armors</div>
+                <div class="card-body">
+                    <h5 class="card-title">Total Armors</h5>
+                    <p class="display-5 fw-bold">@ViewBag.TotalArmors</p>
+                    <p class="fw-light">Armor Types: @ViewBag.TotalArmorTypes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-success text-white shadow-lg rounded-lg">
+                <div class="card-header text-white fw-bold">🔮 Misc Items</div>
+                <div class="card-body">
+                    <h5 class="card-title">Total Misc Items</h5>
+                    <p class="display-5 fw-bold">@ViewBag.TotalMiscs</p>
+                    <p class="fw-light">Misc Types: @ViewBag.TotalMiscTypes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekcja postaci -->
+    <div class="row justify-content-center text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card bg-info text-white shadow-lg rounded-lg">
+                <div class="card-header text-white fw-bold">🎭 Characters</div>
+                <div class="card-body">
+                    <h5 class="card-title">Total Characters</h5>
+                    <p class="display-5 fw-bold">@ViewBag.TotalCharacters</p>
+                    <p class="fw-light">Character Types: @ViewBag.TotalCharacterTypes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card bg-secondary text-white shadow-lg rounded-lg">
+                <div class="card-header text-white fw-bold">🛡️ Pending Approvals</div>
+                <div class="card-body">
+                    <h5 class="card-title">Characters Awaiting Approval</h5>
+                    <p class="display-5 fw-bold">@ViewBag.PendingCharacters</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekcja użytkowników -->
+    <div class="row justify-content-center text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card bg-info text-white shadow-lg rounded-lg">
+                <div class="card-header text-white fw-bold">👥 Users</div>
+                <div class="card-body">
+                    <h5 class="card-title">Total Users</h5>
+                    <p class="display-5 fw-bold">@ViewBag.TotalUsers</p>
+                    <p class="fw-light">Admins: @ViewBag.TotalAdmins</p>
+                    <p class="fw-light">Regular Users: @ViewBag.TotalRegularUsers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

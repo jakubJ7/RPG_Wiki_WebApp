@@ -1,0 +1,27 @@
+﻿@model RPG_Wiki_WebApp.Models.Character.CharacterType
+
+@{
+    ViewData["Title"] = "Delete Character Type";
+}
+
+<h1 class="text-center text-danger mt-4">⚠️ Delete Character Type</h1>
+
+<div class="card shadow-lg p-4">
+    <div class="card-header bg-danger text-white">
+        <h4 class="text-center">Are you sure you want to delete this type?</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3 font-weight-bold">Character Type Name</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+        </dl>
+    </div>
+
+    <div class="card-footer d-flex gap-2 justify-content-between">
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">❌ Confirm Delete</button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary">⬅️ Cancel</a>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Item">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAAAAAACEAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Item\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.ItemRarity">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Item\ItemRarity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Armor.Armor">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAQAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Item\Armor\Armor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Armor.ArmorType">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Item\Armor\ArmorType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Misc.Misc">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\Item\Misc\Misc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Misc.MiscType">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Item\Misc\MiscType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Weapon.Weapon">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAgACAAAAAAAAEAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Item\Weapon\Weapon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Item.Weapon.WeaponType">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\Item\Weapon\WeaponType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Character.Character">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACEAEAAAAgAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Character\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Character.CharacterType">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Character\CharacterType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Chat.ChatHub">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Chat\ChatHub.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.Chat.ChatMessage">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Chat\ChatMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.ViewModels.LoginViewModel">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.ViewModels.RegisterViewModel">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\RegisterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Wiki_WebApp.Models.ApplicationUser">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
