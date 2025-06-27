@@ -112,6 +112,19 @@ Mini-project developed as a requirement for passing the advanced programming lab
   The admin can review, edit, or approve submitted characters.
 
 
+## Technologie i biblioteki użyte w projekcie / Technologies and libraries used
+
+- **.NET 7.0** 
+- **Microsoft.EntityFrameworkCore.SqlServer**
+- **Microsoft.EntityFrameworkCore.Tools**
+- **Microsoft.VisualStudio.Web.CodeGeneration.Design**
+- **Microsoft.AspNetCore.Identity.EntityFrameworkCore**
+- **Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore**
+- **Microsoft.AspNetCore.Identity.UI**
+- **Microsoft.EntityFrameworkCore.Design**
+- **SignalR 2**
+
+
 ## Pokaz dzialania / Showcase
 
 ![Panel logowania / Login panel](showcase/login.png)  
