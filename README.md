@@ -15,67 +15,102 @@ Mini-project developed as a requirement for passing the advanced programming lab
 
 ---
 
-## Funkcjonalności / Features
+## ✅ Funkcjonalności (PL)
 
-- ✅ CRUD dla obiektów broni  
-  **PL:** Dodawanie, edytowanie, usuwanie, przeglądanie broni.  
-  **EN:** Create, read, update, delete weapons.
+- CRUD dla obiektów broni  
+  Dodawanie, edytowanie, usuwanie, przeglądanie broni.
 
-- ✅ CRUD dla obiektów zbroi  
-  **PL:** Zarządzanie zbrojami.  
-  **EN:** Manage armors.
+- CRUD dla obiektów zbroi  
+  Zarządzanie zbrojami.
 
-- ✅ CRUD dla obiektów przedmiotów pozostałych  
-  **PL:** Pełna obsługa innych przedmiotów.  
-  **EN:** Full support for other items.
+- CRUD dla obiektów przedmiotów pozostałych  
+  Pełna obsługa innych przedmiotów.
 
-- ✅ Stronicowanie dla obiektów: broni, zbroi, przedmiotów pozostałych  
-  **PL:** Dzielenie listy przedmiotów na strony.  
-  **EN:** Pagination for weapons, armors, and other items.
+- Stronicowanie dla obiektów: broni, zbroi, przedmiotów pozostałych  
+  Dzielenie listy przedmiotów na strony.
 
-- ✅ Wyszukiwarka przedmiotów po nazwie  
-  **PL:** Wyszukiwanie po nazwie wśród broni, zbroi i innych przedmiotów.  
-  **EN:** Search by name for weapons, armors, and other items.
+- Wyszukiwarka przedmiotów po nazwie  
+  Wyszukiwanie po nazwie wśród broni, zbroi i innych przedmiotów.
 
-- ✅ Sortowanie po typie w danym przedmiocie  
-  **PL:** Sortowanie według kategorii w obrębie wybranego typu przedmiotu.  
-  **EN:** Sorting by category within selected item type.
+- Sortowanie po typie w danym przedmiocie  
+  Sortowanie według kategorii w obrębie wybranego typu przedmiotu.
 
-- ✅ Wyświetlanie w dashboardzie statystyk aplikacji  
-  **PL:** Pokazywanie liczby i rodzaju obiektów w systemie.  
-  **EN:** Display statistics about the types and counts of objects in a dashboard.
+- Wyświetlanie w dashboardzie statystyk aplikacji  
+  Pokazywanie liczby i rodzaju obiektów w systemie.
 
-- ✅ Rejestrowanie użytkowników  
-  **PL:** Możliwość tworzenia kont.  
-  **EN:** User registration.
+- Rejestrowanie użytkowników  
+  Możliwość tworzenia kont.
 
-- ✅ Logowanie użytkowników  
-  **PL:** Autoryzacja użytkowników.  
-  **EN:** User login.
+- Logowanie użytkowników  
+  Autoryzacja użytkowników.
 
-- ✅ Dodawanie nowej postaci przez użytkownika  
-  **PL:** Użytkownik może dodać postać; zgłoszenie trafia do admina do weryfikacji.  
-  **EN:** Users can submit a new character, which is sent to the admin for approval.
+- Dodawanie nowej postaci przez użytkownika  
+  Użytkownik może dodać postać; zgłoszenie trafia do admina do weryfikacji.
 
-- ✅ Sortowanie postaci po typie  
-  **PL:** Sortowanie postaci według przypisanego typu.  
-  **EN:** Sorting characters by assigned type.
+- Sortowanie postaci po typie  
+  Sortowanie postaci według przypisanego typu.
 
-- ✅ Live Chat dla zalogowanych użytkowników  
-  **PL:** Czat w czasie rzeczywistym dla użytkowników z kontem.  
-  **EN:** Live chat for logged-in users.
+- Live Chat dla zalogowanych użytkowników  
+  Czat w czasie rzeczywistym dla użytkowników z kontem.
 
-- ✅ Zarządzanie typami postaci w panelu admina  
-  **PL:** Admin może tworzyć i edytować typy/kategorie postaci.  
-  **EN:** Admin can manage and create character types/categories.
+- Zarządzanie typami postaci w panelu admina  
+  Admin może tworzyć i edytować typy/kategorie postaci.
 
-- ✅ Pełen CRUD dla typów postaci  
-  **PL:** Dodawanie, edytowanie, usuwanie, przeglądanie typów postaci.  
-  **EN:** Full CRUD for character types.
+- Pełen CRUD dla typów postaci  
+  Dodawanie, edytowanie, usuwanie, przeglądanie typów postaci.
 
-- ✅ Panel do przeglądania zgłoszonych nowych postaci  
-  **PL:** Admin może przejrzeć zgłoszenie, poprawić je lub zaakceptować.  
-  **EN:** Admin can review, edit, or approve submitted characters.
+- Panel do przeglądania zgłoszonych nowych postaci  
+  Admin może przejrzeć zgłoszenie, poprawić je lub zaakceptować.
+
+---
+
+## ✅ Features (EN)
+
+- CRUD for weapons  
+  Create, read, update, delete weapons.
+
+- CRUD for armors  
+  Manage armors.
+
+- CRUD for other items  
+  Full support for other items.
+
+- Pagination for weapons, armors, and other items  
+  Split item lists into pages.
+
+- Search by item name  
+  Search by name among weapons, armors, and other items.
+
+- Sorting by type within selected item  
+  Sort by category within selected item type.
+
+- Dashboard statistics display  
+  Show the number and types of objects in the system.
+
+- User registration  
+  Ability to create accounts.
+
+- User login  
+  User authentication.
+
+- User character submission  
+  Users can submit a new character; the submission is sent to the admin for review.
+
+- Sorting characters by type  
+  Sort characters by their assigned type.
+
+- Live chat for logged-in users  
+  Real-time chat for logged-in users.
+
+- Managing character types in the admin panel  
+  The admin can create and edit character types/categories.
+
+- Full CRUD for character types  
+  Add, edit, delete, and view character types.
+
+- Panel for reviewing submitted characters  
+  The admin can review, edit, or approve submitted characters.
+
 
 ## Pokaz dzialania / Showcase
 
